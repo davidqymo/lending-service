@@ -43,7 +43,7 @@ password = admin  (default)
 http://localhost:8162
 
 username: admin
-passwork: admin
+password: admin
 ```
 
 
