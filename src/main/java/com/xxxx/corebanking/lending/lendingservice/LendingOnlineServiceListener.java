@@ -1,4 +1,4 @@
-package com.hsbc.corebanking.lending.lendingservice;
+package com.xxxx.corebanking.lending.lendingservice;
 
 import javax.jms.JMSException;
 import javax.jms.Message;

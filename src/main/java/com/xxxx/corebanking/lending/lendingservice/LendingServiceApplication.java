@@ -1,8 +1,8 @@
-package com.hsbc.corebanking.lending.lendingservice;
+package com.xxxx.corebanking.lending.lendingservice;
 
 
-import com.hsbc.corebanking.lending.lendingservice.dao.CustomerDAO;
-import com.hsbc.corebanking.lending.lendingservice.entity.Customer_info;
+import com.xxxx.corebanking.lending.lendingservice.dao.CustomerDAO;
+import com.xxxx.corebanking.lending.lendingservice.entity.Customer_info;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

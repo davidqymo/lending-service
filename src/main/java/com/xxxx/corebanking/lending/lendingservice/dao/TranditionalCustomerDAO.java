@@ -1,7 +1,7 @@
-package com.hsbc.corebanking.lending.lendingservice.dao;
+package com.xxxx.corebanking.lending.lendingservice.dao;
 
-import com.hsbc.corebanking.lending.lendingservice.SessionFactoryUtl;
-import com.hsbc.corebanking.lending.lendingservice.entity.Customer_info;
+import com.xxxx.corebanking.lending.lendingservice.SessionFactoryUtl;
+import com.xxxx.corebanking.lending.lendingservice.entity.Customer_info;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;

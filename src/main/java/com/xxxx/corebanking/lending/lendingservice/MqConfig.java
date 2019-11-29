@@ -1,4 +1,4 @@
-package com.hsbc.corebanking.lending.lendingservice;
+package com.xxxx.corebanking.lending.lendingservice;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQQueue;
@@ -12,7 +12,7 @@ import javax.jms.ConnectionFactory;
 
 
 @Configuration
-@ComponentScan("com.hsbc.corebanking.lending*")
+@ComponentScan("com.xxxx.corebanking.lending*")
 public class MqConfig {
 
     @Bean(name ="ConnectionFactory")

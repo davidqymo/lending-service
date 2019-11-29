@@ -1,6 +1,6 @@
-package com.hsbc.corebanking.lending.lendingservice.dao;
+package com.xxxx.corebanking.lending.lendingservice.dao;
 
-import com.hsbc.corebanking.lending.lendingservice.entity.Customer_info;
+import com.xxxx.corebanking.lending.lendingservice.entity.Customer_info;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,7 +13,7 @@ public class CustomerDAO {
     @Qualifier("mybatisSession")
     SqlSession session;
 
-    public final static String MAPPER_PACKAGE = "com.hsbc.corebanking.lending.lendingservice.entity.CustomerMapper.";
+    public final static String MAPPER_PACKAGE = "com.xxxx.corebanking.lending.lendingservice.entity.CustomerMapper.";
 
     public Customer_info getCustomerbyId(int id) {
         Customer_info info = session.selectOne(MAPPER_PACKAGE + "SelectCustomer",id );

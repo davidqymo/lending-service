@@ -1,4 +1,4 @@
-package com.hsbc.corebanking.lending.lendingservice.entity;
+package com.xxxx.corebanking.lending.lendingservice.entity;
 
 import java.sql.Date;
 
