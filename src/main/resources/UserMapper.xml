@@ -31,4 +31,21 @@
     <delete id="DeleteCustomer" parameterType="Customer_info">
         delete from customer_info where customer_id =#{customer_id}
     </delete>
+
+    <select id="selectAll" resultType="Customer_info" parameterType="CustomerPageParameters">
+        select customer_id,customer_name,gender,date_of_birth date_birth,create_time,update_time
+        from customer_info limit #{startIndex}, #{pageNumber}
+    </select>
+
+    <select id="selectAllMap" resultType="Customer_info" parameterType="Map">
+        select customer_id,customer_name,gender,date_of_birth date_birth,create_time,update_time
+        from customer_info limit #{startIndex}, #{pageNumber}
+    </select>
+
+    <select id="getAll" resultType="Customer_info" >
+        select customer_id,customer_name,gender,date_of_birth date_birth,create_time,update_time
+        from customer_info
+    </select>
+
+
 </mapper>

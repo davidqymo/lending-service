@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.Date;
+import java.util.List;
 
 
 public class LendingServiceApplication {
@@ -29,6 +30,28 @@ public class LendingServiceApplication {
         System.out.println( dao.updateCustomer( customer_info ) );
 
         System.out.println(dao.getCustomerbyId( 13 ) );
+
+        System.out.println("===================================" );
+        for (int i =1 ; i < 6; i++) {
+            List<Customer_info> list = dao.getAllCustomer( i, 5 );
+            System.out.println("---Page---> " + i );
+            list.stream( ).forEach( System.out::println );
+        }
+
+
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4" );
+        for (int i =1 ; i < 6; i++) {
+            List<Customer_info> list = dao.getAllCustomerMap( i, 5 );
+            System.out.println("======Page=====> " + i );
+            list.stream( ).forEach( System.out::println );
+        }
+
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5" );
+        for (int i =1 ; i < 6; i++) {
+            List<Customer_info> list = dao.getAllCustomerMap( i, 5 );
+            System.out.println("*******Page******" + i );
+            list.stream( ).forEach( System.out::println );
+        }
 
     }
 
