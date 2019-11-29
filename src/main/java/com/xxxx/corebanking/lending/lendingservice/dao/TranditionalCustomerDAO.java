@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class TranditionalCustomerDAO {
 
-    public final static String MAPPER_PACKAGE = "com.hsbc.corebanking.lending.lendingservice.entity.CustomerMapper.";
+    public  static final String MAPPER_PACKAGE = "com.xxxx.corebanking.lending.lendingservice.entity.CustomerMapper.";
 
     public Customer_info getCustomerbyId(int id) throws IOException {
         SqlSession session = SessionFactoryUtl.getSqlSession();
