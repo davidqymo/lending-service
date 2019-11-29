@@ -6,7 +6,9 @@ public class Customer_info {
     private Integer customer_id;
     private String customer_name;
     private Integer gender;
-    private Date date_of_birth;
+//    private Date date_of_birth;
+    private Date date_birth;
+
     private Date create_time;
     private Date update_time;
 
@@ -34,12 +36,21 @@ public class Customer_info {
         this.gender = gender;
     }
 
-    public Date getDate_of_birth() {
-        return date_of_birth;
+//    public Date getDate_of_birth() {
+//        return date_of_birth;
+//    }
+//
+//    public void setDate_of_birth(Date date_of_birth) {
+//        this.date_of_birth = date_of_birth;
+//    }
+
+
+    public Date getDate_birth() {
+        return date_birth;
     }
 
-    public void setDate_of_birth(Date date_of_birth) {
-        this.date_of_birth = date_of_birth;
+    public void setDate_birth(Date date_birth) {
+        this.date_birth = date_birth;
     }
 
     public Date getCreate_time() {
@@ -58,13 +69,26 @@ public class Customer_info {
         this.update_time = update_time;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Customer_info{" +
+//                "customer_id=" + customer_id +
+//                ", customer_name='" + customer_name + '\'' +
+//                ", gender=" + gender +
+//                ", date_of_birth=" + date_of_birth +
+//                ", create_time=" + create_time +
+//                ", update_time=" + update_time +
+//                '}';
+//    }
+
+
     @Override
     public String toString() {
         return "Customer_info{" +
                 "customer_id=" + customer_id +
                 ", customer_name='" + customer_name + '\'' +
                 ", gender=" + gender +
-                ", date_of_birth=" + date_of_birth +
+                ", date_birth=" + date_birth +
                 ", create_time=" + create_time +
                 ", update_time=" + update_time +
                 '}';

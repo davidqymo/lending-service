@@ -5,6 +5,12 @@
 <configuration>
     <!-- import the database configuration -->
     <properties resource="jdbc.properties"></properties>
+
+    <typeAliases>
+<!--        <typeAlias type="com.xxxx.corebanking.lending.lendingservice.entity.Customer_info" alias="Customer" />-->
+        <package name="com.xxxx.corebanking.lending.lendingservice.entity"  />
+    </typeAliases>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -14,6 +20,9 @@
                 <property name="url" value="${jdbc.url}"/>
                 <property name="username" value="${jdbc.username}"/>
                 <property name="password" value="${jdbc.password}"/>
+                <property name="defaultTransactionIsolationLevel" value="${jdbc.defaultTransactionIsolationLevel}" />
+                <property name="poolMaximumActiveConnections" value="${jdbc.poolMaximumActiveConnections}" />
+                <property name="poolMaximumIdleConnections" value="${jdbc.poolMaximumIdleConnections}" />
             </dataSource>
         </environment>
     </environments>
