@@ -1,14 +1,11 @@
 package com.xxxx.corebanking.dao;
 
 import com.xxxx.corebanking.entity.Customer_info;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 import java.util.List;
 
-@Component
+
 public interface CustomerInfoDAO {
 
     @Select( CoreBankingSQLStatementConstant.CUSTOMER_SELECT )
@@ -18,6 +15,7 @@ public interface CustomerInfoDAO {
     List<Customer_info> getAll();
 
     @Insert( CoreBankingSQLStatementConstant.CUSTOMER_INSERT )
+    @SelectKey( statement = "select last_insert_id()", keyProperty = "customer_id", resultType = Long.class, before = false)
     int insertCustomer(Customer_info customer);
 
     @Update( CoreBankingSQLStatementConstant.CUSTOMER_UPDATE )

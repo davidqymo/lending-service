@@ -1,5 +1,4 @@
-5package com.xxxx.corebanking.config;
-import	java.beans.Beans;
+package com.xxxx.corebanking.config;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -23,6 +22,7 @@ public class MyBatisConfig {
     @Bean("mybatisSession")
     SqlSession getMySqlSession() throws IOException {
         SqlSessionFactory sqlfactory = getMySessionFactory();
-        return sqlfactory.openSession();
+        SqlSession session = sqlfactory.openSession( true );
+        return session;
     }
 }

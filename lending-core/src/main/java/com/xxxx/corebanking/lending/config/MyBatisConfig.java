@@ -5,25 +5,26 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-@Configuration
+@Component
 public class MyBatisConfig {
 
     @Bean("sqlSessionFactory")
     SqlSessionFactory getMySessionFactory() throws IOException {
-        String resource = "MyBatis_Config.xml";
-        InputStream inputStream = Resources.getResourceAsStream( resource);
-        SqlSessionFactory sqlSession = new SqlSessionFactoryBuilder().build( inputStream );
+        String resource = "MyBatis.Config.xml";
+        InputStream inputStream = Resources.getResourceAsStream( resource );
+        SqlSessionFactory sqlSession = new SqlSessionFactoryBuilder( ).build( inputStream );
         return sqlSession;
     }
-@Bean("mybatisSession")
-SqlSession getMySqlSession() throws IOException {
-        SqlSessionFactory sqlfactory = getMySessionFactory();
-        return sqlfactory.openSession();
-}
 
+    @Bean("mybatisSession")
+    SqlSession getMySqlSession() throws IOException {
+        SqlSessionFactory sqlfactory = getMySessionFactory( );
+        SqlSession session = sqlfactory.openSession( true );
+        return session;
+    }
 }

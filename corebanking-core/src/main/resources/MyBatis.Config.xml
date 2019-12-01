@@ -30,7 +30,8 @@
 
     <!-- Configuration the Mapper：sql Statement and resultSet  -->
     <mappers>
-        <mapper class="com.xxxx.corebanking.dao.CustomerInfoDAO" />
-        <mapper class="com.xxxx.corebanking.dao.CustomerLimitDAO" />
+<!--        <mapper class="com.xxxx.corebanking.dao.CustomerInfoDAO" />-->
+<!--        <mapper class="com.xxxx.corebanking.dao.CustomerLimitDAO" />-->
+        <package name="com.xxxx.corebanking.dao"/>
     </mappers>
 </configuration>

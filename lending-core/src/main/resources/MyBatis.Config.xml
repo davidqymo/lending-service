@@ -7,7 +7,6 @@
     <properties resource="jdbc.properties"></properties>
     <settings>
         <setting name="useGeneratedKeys" value="true"/>
-        <setting name="defaultExecutorType" value="REUSE"/>
     </settings>
     <typeAliases>
         <package name="com.xxxx.corebanking.lending.entity"/>
@@ -22,16 +21,15 @@
                 <property name="url" value="${jdbc.url}"/>
                 <property name="username" value="${jdbc.username}"/>
                 <property name="password" value="${jdbc.password}"/>
-                <property name="defaultTransactionIsolationLevel" value="${jdbc.defaultTransactionIsolationLevel}" />
-                <property name="poolMaximumActiveConnections" value="${jdbc.poolMaximumActiveConnections}" />
-                <property name="poolMaximumIdleConnections" value="${jdbc.poolMaximumIdleConnections}" />
+                <property name="defaultTransactionIsolationLevel" value="${jdbc.defaultTransactionIsolationLevel}"/>
+                <property name="poolMaximumActiveConnections" value="${jdbc.poolMaximumActiveConnections}"/>
+                <property name="poolMaximumIdleConnections" value="${jdbc.poolMaximumIdleConnections}"/>
             </dataSource>
         </environment>
     </environments>
 
     <!-- Configuration the Mapper：sql Statement and resultSet  -->
     <mappers>
-        <mapper class="com.xxxx.corebanking.lending.dao.LoanAccountDAO" />
-        <mapper class="com.xxxx.corebanking.lending.dao.LoanProductDAO" />
+        <package name="com.xxxx.corebanking.lending.dao"/>
     </mappers>
 </configuration>
