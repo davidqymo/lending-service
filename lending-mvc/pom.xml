@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lending-parent</artifactId>
+        <groupId>com.xxxx.corebanking.lending</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xxxx.corebanking.lending.mvc</groupId>
+    <artifactId>lending-mvc</artifactId>
+    <packaging>war</packaging>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.xxxx.corebanking.lending</groupId>
+            <artifactId>lending-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xxxx.corebanking</groupId>
+            <artifactId>corebanking-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>io.openliberty.tools</groupId>-->
+        <!--            <artifactId>liberty-maven-plugin</artifactId>-->
+        <!--            <version>3.0.1</version>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--            <plugin>-->
+            <!--                <groupId>io.openliberty.tools</groupId>-->
+            <!--                <artifactId>liberty-maven-plugin</artifactId>-->
+            <!--                <version>3.0.1</version>-->
+            <!--                <extensions>true</extensions>-->
+            <!--                <configuration>-->
+            <!--                    <installDirectory>/Applications/WASLIB/</installDirectory>-->
+            <!--                    <serverName>defaultServer</serverName>-->
+            <!--                    <cleanDropins>true</cleanDropins>-->
+            <!--                    <cleanApps>true</cleanApps>-->
+            <!--                </configuration>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>clean</id>-->
+            <!--                        <phase>clean</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>clean</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+
+            <!--                    <execution>-->
+            <!--                        <id>delopy</id>-->
+            <!--                        <phase>verify</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>deploy</goal>-->
+            <!--                            <goal>start</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <appsDirectory>apps</appsDirectory>-->
+            <!--                            <stripVersion>true</stripVersion>-->
+            <!--                            <deployPackages>project</deployPackages>-->
+            <!--                            <looseApplication>true</looseApplication>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
