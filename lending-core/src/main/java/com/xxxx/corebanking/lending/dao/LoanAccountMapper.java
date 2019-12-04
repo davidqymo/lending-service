@@ -17,7 +17,7 @@ public interface LoanAccountMapper {
             "delete from loan_account_info",
             "where loan_id = #{loanId,jdbcType=BIGINT}"
     })
-    int deleteByPrimaryKey(Long loanId);
+
 
     @Insert({
             "insert into loan_account_info (customer_id, limit_id, ",
