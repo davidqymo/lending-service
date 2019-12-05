@@ -19,15 +19,17 @@ mysql8.0 -docker image, later to under cluster in pxc
 
 ActiveMQ (consider kafka later )
 
-##### Presentage Layer:
+##### Presentation Layer:
 
 Angular
 
-
 Note: Later will provide the docker image
 
+##### Logging and tracing
 
-## Project Componenet
+SLF4J + Log4J2 asynchronization + ELK
+
+## Project Component
 
 ##### corebanking-core : 
 
