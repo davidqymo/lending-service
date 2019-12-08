@@ -1,6 +1,6 @@
 package com.xxxx.corebanking.lending.service;
 
-import com.xxxx.corebanking.lending.config.PackageConfig;
+import com.xxxx.corebanking.lending.config.LendingPackageConfig;
 import com.xxxx.corebanking.lending.service.message.LendingOnlineServiceListener;
 import com.xxxx.corebanking.lending.service.message.support.TransactionCode;
 import org.apache.activemq.command.ActiveMQQueue;
@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.jms.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = PackageConfig.class)
+@ContextConfiguration(classes = LendingPackageConfig.class)
 public class MessageProcessorTest {
 
     @Autowired

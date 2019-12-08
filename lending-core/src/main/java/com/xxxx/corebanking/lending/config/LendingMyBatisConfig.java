@@ -11,9 +11,9 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Component
-public class MyBatisConfig {
+public class LendingMyBatisConfig {
 
-    @Bean("sqlSessionFactory")
+    @Bean("lendingSqlSessionFactory")
     SqlSessionFactory getMySessionFactory() throws IOException {
         String resource = "MyBatis.Config.xml";
         InputStream inputStream = Resources.getResourceAsStream( resource );
@@ -21,10 +21,12 @@ public class MyBatisConfig {
         return sqlSession;
     }
 
-    @Bean("mybatisSession")
+    @Bean("lendingMybatisSession")
     SqlSession getMySqlSession() throws IOException {
         SqlSessionFactory sqlfactory = getMySessionFactory( );
         SqlSession session = sqlfactory.openSession( true );
         return session;
     }
+
+
 }

@@ -5,6 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = "com.xxxx.corebanking.lending.*")
-public class PackageConfig {
+public class LendingPackageConfig {
 
 }

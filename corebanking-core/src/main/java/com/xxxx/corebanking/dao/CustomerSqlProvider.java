@@ -11,8 +11,8 @@ public class CustomerSqlProvider {
         if (record.getCustomerName() != null) {
             sql.VALUES("customer_name", "#{customerName,jdbcType=VARCHAR}");
         }
-        
-        if (record.getGender() != null) {
+
+        if (record.getGender( ) != 0) {
             sql.VALUES("gender", "#{gender,jdbcType=BIT}");
         }
         
@@ -38,8 +38,8 @@ public class CustomerSqlProvider {
         if (record.getCustomerName() != null) {
             sql.SET("customer_name = #{customerName,jdbcType=VARCHAR}");
         }
-        
-        if (record.getGender() != null) {
+
+        if (record.getGender( ) != 0) {
             sql.SET("gender = #{gender,jdbcType=BIT}");
         }
         

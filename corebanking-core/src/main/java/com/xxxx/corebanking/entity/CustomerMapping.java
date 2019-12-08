@@ -1,5 +1,6 @@
 package com.xxxx.corebanking.entity;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class CustomerMapping {
@@ -9,9 +10,9 @@ public class CustomerMapping {
 
     private String extCustomerNum;
 
-    private Date createTime;
+    private LocalDateTime createTime;
 
-    private Date updateTime;
+    private LocalDateTime updateTime;
 
     public Long getCustomerId() {
         return customerId;
@@ -37,19 +38,19 @@ public class CustomerMapping {
         this.extCustomerNum = extCustomerNum == null ? null : extCustomerNum.trim();
     }
 
-    public Date getCreateTime() {
+    public LocalDateTime getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(LocalDateTime createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdateTime() {
+    public LocalDateTime getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Date updateTime) {
+    public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
     }
 }

@@ -18,6 +18,7 @@ public class LendingProductService {
         control.setProductDescription( "住房抵押贷款" );
         control.setCreateTime( new Date( System.currentTimeMillis( ) ) );
         control.setCreateTime( new Date( System.currentTimeMillis( ) ) );
+
         return control;
     }
 

@@ -3,6 +3,7 @@ package com.xxxx.corebanking.dao;
 import com.xxxx.corebanking.entity.Customer_info;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
+
 import java.util.List;
 
 

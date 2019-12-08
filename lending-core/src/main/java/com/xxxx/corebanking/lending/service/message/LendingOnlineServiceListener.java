@@ -6,6 +6,7 @@ import org.slf4j.ILoggerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.util.StopWatch;
 
 import javax.jms.*;
 import java.lang.reflect.InvocationHandler;
@@ -31,13 +32,15 @@ public class LendingOnlineServiceListener implements MessageListener {
         MessageHandler proxyObject = (MessageHandler) Proxy.newProxyInstance( this.getClass( ).getClassLoader( ), new Class[]{MessageHandler.class},
                 (proxy, method, args) -> {
 
-                    LocalTime t1 = LocalTime.now( );
+                    StopWatch sw = new StopWatch( );
+
+                    sw.start( "task1" );
 
                     Object object = method.invoke( handler, args );
-
                     TransactionTypeAnnotation annotation = handler.getClass( ).getAnnotation( TransactionTypeAnnotation.class );
-                    Duration duration = Duration.between( t1, LocalTime.now( ) );
-                    logger.info( "Transaction Type {} Process Duration {} ms", annotation.value( ), duration.toMillis( ) );
+                    sw.stop( );
+
+                    logger.info( "Time Spent is: {} ms", sw.getTotalTimeMillis( ) );
 
                     return object;
                 } );

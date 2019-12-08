@@ -1,6 +1,6 @@
 package com.xxxx.corebanking.dao;
 
-import com.xxxx.corebanking.config.PackageConfig;
+import com.xxxx.corebanking.config.CoreBankingPackageConfig;
 import com.xxxx.corebanking.entity.Customer_limit;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
@@ -8,12 +8,14 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 
 import static org.junit.Assert.*;
 @RunWith( SpringJUnit4ClassRunner.class )
-@ContextConfiguration(classes = PackageConfig.class)
+@ContextConfiguration(classes = CoreBankingPackageConfig.class)
+@Transactional("transactionManager")
 public class CustomerLimitDAOTest {
 
     @Autowired

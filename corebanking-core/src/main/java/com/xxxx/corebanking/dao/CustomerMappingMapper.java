@@ -26,7 +26,7 @@ public interface CustomerMappingMapper {
         "#{extCustomerNum,jdbcType=CHAR}, #{createTime,jdbcType=TIMESTAMP}, ",
         "#{updateTime,jdbcType=TIMESTAMP})"
     })
-    int insert(CustomerMapping record);
+    int insert(CustomerMapping record) throws Exception;
 
     @InsertProvider(type=CustomerMappingSqlProvider.class, method="insertSelective")
     int insertSelective(CustomerMapping record);
